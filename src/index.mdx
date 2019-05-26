@@ -1,0 +1,44 @@
+import { Head, Notes } from 'mdx-deck'
+import { Appear } from 'mdx-deck'
+export { dark as theme } from '@mdx-deck/themes'
+
+## Topics we'll be covering 
+<ul>
+  <Appear>
+    <li>React</li>
+    <li>Two</li>
+    <li>Three</li>
+  </Appear>
+</ul>
+
+---
+## What is jsx?
+
+import { FullScreenCode } from 'mdx-deck/layouts'
+
+```jsx
+<Button>Beep</Button>
+```
+
+---
+import React from "react";
+import {
+  LiveProvider,
+  LiveEditor,
+  LiveError,
+  LivePreview
+} from 'react-live'
+
+<LiveProvider code={`class MyComponent extends React.Component {
+  render() {
+    return "hello";
+  }
+}`}>
+  <LiveEditor />
+  <LiveError />
+  <LivePreview />
+</LiveProvider>
+
+---
+
+<https://github.com/jxnblk/mdx-deck>
