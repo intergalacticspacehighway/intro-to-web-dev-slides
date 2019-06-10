@@ -1,0 +1,15 @@
+Topic Name: Introduction to React and Web Applications
+Topic Description in brief:
+We will have a brief Discussion on
+     1- What is a web application?
+          - What makes a website behave like an application.
+     2-  What is ReactJS? Why do we need it or any frameworks at all?
+          - What is achieved using react.
+          - Problems solved by frameworks.
+    3- How client-side rendering and server-side rendering works?
+          - React on client side and server side. Which one to use?
+     4-  What is a progressive web app?
+          - What are the capabilities provided by a PWA.
+     5- Overview of the tools that can be used to develop a React app.
+          - Brief discussion on bundlers (Webpack) which has opened a new way for developing client side applications.
+Also we will have a short Demonstration : Building a simple web application using React.
