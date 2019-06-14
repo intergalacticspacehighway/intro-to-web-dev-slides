@@ -1,53 +1,119 @@
-import { Head, Notes } from 'mdx-deck'
-import { Appear } from 'mdx-deck'
-export { dark as theme } from '@mdx-deck/themes'
+import { Head, Notes } from "mdx-deck";
+import { Appear } from "mdx-deck";
+import future from '@mdx-deck/themes/future'
+import aspect from '@mdx-deck/themes/aspect'
+import { Image } from "mdx-deck";
+export const themes = [
+  future,
+  aspect,
+];
+
+---
 
 ### Topics
+
 <ul>
   <Appear>
     <li>Web Applications</li>
-    <li>How client-side and server-side rendering works?</li>
     <li>Why do we need it any frameworks/libraries at all?</li>
     <li>What is ReactJS?</li>
     <li>What is a progressive web app?</li>
-    <li>Overview of the tools that can be used to develop a React app.</li>
+    <li>Tools that can be used to develop a React app.</li>
   </Appear>
 </ul>
 
 ---
-How to make a web application?
----
+
+#### How to make a modern web application?
+
+<ul>
+  <Appear>
+      <li>Client Side rendering</li>
+      <li>Server Side rendering</li>
+  </Appear>
+
+</ul>
 
 ---
-import fbImage from "../img/fb.png";
 
-Analysing facebook's new home page
-<img src={fbImage} />
+### SSR
+
+#### Advantages
+
+<ul>
+  <Appear>
+    <li>Faster first page load </li>
+    <li> Better SEO </li>
+  </Appear>
+
+</ul>
+
 ---
 
+### CSR
+
+#### Advantages
+
+<ul>
+  <Appear>
+    <li>Rich Interactions </li>
+    <li>Not recommended for SEO required pages</li>
+    <div style={{textAlign:"center"}}>
+      <img 
+          style={{ height:"30vh"
+        }} src={require(`file-loader!../img/awesome-js.gif`)} />
+    </div>
+   
+  </Appear>
+</ul>
+
+
 ---
+
+#### Most of the popular apps use both
+
+###### However, we'll consider a CSR example to keep it simple
+---
+#### CSR 101
+
+##### How an API call is made in a browser?
+
+```jsx
+fetch('API_URL')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    // Render content on Page
+    console.log(JSON.stringify(myJson));
+  });
+```
+---
+
+<Image src={require("file-loader!../img/fb.png")} />
+
+---
+
 ## What is jsx?
 
-import { FullScreenCode } from 'mdx-deck/layouts'
+import { FullScreenCode } from "mdx-deck/layouts";
 
 ```jsx
 <Button>Beep</Button>
 ```
 
 ---
-import React from "react";
-import {
-  LiveProvider,
-  LiveEditor,
-  LiveError,
-  LivePreview
-} from 'react-live'
 
-<LiveProvider code={`class MyComponent extends React.Component {
+import React from "react";
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+
+<LiveProvider
+  code={`class MyComponent extends React.Component {
   render() {
     return "hello";
   }
-}`}>
+}`}
+>
   <LiveEditor />
   <LiveError />
   <LivePreview />

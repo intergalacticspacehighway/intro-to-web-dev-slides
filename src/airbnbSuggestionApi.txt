@@ -1,0 +1,1 @@
+https://www.airbnb.com/api/v2/autocompletes?country=IN&key=d306zoyjsyarp7ifhu67rjxn52tv0t20&language=en&locale=en&num_results=5&user_input=h&api_version=1.1.9&vertical_refinement=all&region=-1&options=should_show_stays
