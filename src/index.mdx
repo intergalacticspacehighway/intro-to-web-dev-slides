@@ -3,24 +3,29 @@ import { Appear } from "mdx-deck";
 import swiss from "@mdx-deck/themes/swiss";
 import aspect from "@mdx-deck/themes/aspect";
 import { Image } from "mdx-deck";
-
+const webDevImage = require("file-loader!../img/web-dev.png");
+const smallFontStyle = {
+  fontSize: "1.5rem"
+};
 export const themes = [swiss, aspect];
 
-### Intro to Web development
+### Intro to Web Development
+
+<img src={webDevImage} title="Web development" />
 
 ---
 
-### Topics
+### Topics 🤔
 
 <ul>
   <Appear>
-    <li>Web Applications</li>
-    <li>Why do we need a framework/library to build a web app?</li>
-    <li>What is ReactJS?</li>
-    <div style={{ fontSize: "1rem", textAlign: "center" }}>
+    <li>Web Applications 101 🖥️</li>
+    <li>Why do we need a framework/library to build a web app? 🤨</li>
+    <li>What is ReactJS? 🎊 </li>
+    <div style={{ textAlign: "center" }}>
       <img
         title="Airbnb auto complete search box"
-        style={{ width: "40vw" }}
+        style={{ width: "50vw", paddingTop: "20px" }}
         src={require(`file-loader!../img/airBnbSearch.png`)}
       />
     </div>
@@ -29,24 +34,28 @@ export const themes = [swiss, aspect];
 
 ---
 
-<ul style={{padding:"0 100px"}}>
-  <h3>
-What is a Web application?
-  
-  </h3>
+<ul style={{ padding: "0 100px" }}>
+  <h3>What is a web application? 🤔</h3>
   <Appear>
-
-  <li>
-    A web application is a client–server computer program which the client runs
-    in a web browser.
-  </li>
-  <li>
-    Common web applications include webmail, online retail sales, and online
-    auction.
-  </li>
-
-  <img src="https://www.maxcdn.com/one/media/web-application.png" />
-</Appear>
+    <li>
+      A web application is a client–server computer program which the client
+      runs in a web browser.
+    </li>
+    <li style={{ ...smallFontStyle, marginTop: "20px" }}>
+      Client - Google chrome, Firefox 💻
+    </li>
+    <div style={{ textAlign: "center" }}>
+      <img
+        style={{ height: "30vh" }}
+        src={require(`file-loader!../img/awesome-js.gif`)}
+      />
+    </div>
+    <li style={smallFontStyle}>
+      Server - Server side language i.e. GoLang, NodeJS, Ruby on rails ↔️
+      Database 🗄️
+    </li>
+    <img src="https://www.maxcdn.com/one/media/web-application.png" />
+  </Appear>
 </ul>
 
 ---
@@ -55,8 +64,8 @@ What is a Web application?
 
 <ul>
   <Appear>
-      <li>Client Side rendering</li>
-      <li>Server Side rendering</li>
+      <li>Client Side rendering 💻</li>
+      <li>Server Side rendering ️️️🗄️</li>
   </Appear>
 
 </ul>
@@ -66,9 +75,9 @@ What is a Web application?
 ### SSR
 
 <Appear>
-  <li>Information/Data is processed server side</li>
-  <li>UI is generated server side</li>
-  <li>Server responds with HTML pages</li>
+  <li>Information/Data is processed server side ️️🗄️ </li>
+  <li>UI is generated server side 🌃 </li>
+  <li>Server responds with HTML pages 📄</li>
 </Appear>
 
 ---
@@ -76,25 +85,18 @@ What is a Web application?
 ### CSR
 
 <Appear>
-  <li>Information/Data is processed client side</li>
-  <li>UI is generated client side</li>
-  <li>Server responds with JSON/XML data</li>
-
-  <div style={{ textAlign: "center" }}>
-    <img
-      style={{ height: "30vh" }}
-      src={require(`file-loader!../img/awesome-js.gif`)}
-    />
-  </div>
+  <li>Information/Data is processed client side 💻</li>
+  <li>UI is generated client side 🌆</li>
+  <li>Server responds with JSON/XML data ✉️󠁻</li>
 </Appear>
 
 ---
 
-### Most of the popular apps use both.
+### Most of the popular apps use both. 💯
 
 i.e. SSR, CSR
 
-##### However, we'll consider a CSR example to keep it simple
+##### However, we'll consider a CSR example to keep it simple 😌
 
 ---
 
@@ -124,16 +126,16 @@ fetch("API_URL")
 <div>
   <h4>What is ReactJS?</h4>
   <p>A JavaScript library for building user interfaces</p>
-  <div>
+  <ul>
     <Appear>
       <li>Declarative - Describe how it looks not how to create it</li>
       <li>Component Based - Divide UI into components</li>
       <li>Learn once write anywhere - React Native, React VR</li>
-      <div style={{ position: "absolute", bottom: "20px", fontSize: "1.3rem" }}>
+      <div style={{ position: "absolute", bottom: "20px", ...smallFontStyle }}>
         Note - React can be used for SSR as well as CSR
       </div>
     </Appear>
-  </div>
+  </ul>
 </div>
 
 ---
@@ -156,3 +158,7 @@ fetch("API_URL")
   style={{ height: "60vh" }}
   src={require("file-loader!../img/flipkartPWA.gif")}
 />
+
+---
+
+Thank you! 😄
