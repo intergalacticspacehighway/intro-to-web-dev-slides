@@ -10,36 +10,48 @@ export const themes = [swiss, aspect];
 
 ---
 
-#### Topics
+### Topics
 
 <ul>
   <Appear>
     <li>Web Applications</li>
-    <li>Why do we need it any frameworks/libraries at all?</li>
+    <li>Why do we need a framework/library to build a web app?</li>
     <li>What is ReactJS?</li>
-    <li>What is a progressive web app?</li>
-    <li>Tools that can be used to develop a React app.</li>
+    <div style={{ fontSize: "1rem", textAlign: "center" }}>
+      <img
+        title="Airbnb auto complete search box"
+        style={{ width: "40vw" }}
+        src={require(`file-loader!../img/airBnbSearch.png`)}
+      />
+    </div>
   </Appear>
 </ul>
 
 ---
 
-<div style={{ padding: "100px" }}>
-  <h4> What is a Web application?</h4>
-  <p>
+<ul style={{padding:"0 100px"}}>
+  <h3>
+What is a Web application?
+  
+  </h3>
+  <Appear>
+
+  <li>
     A web application is a client–server computer program which the client runs
     in a web browser.
-  </p>
-  <p>
+  </li>
+  <li>
     Common web applications include webmail, online retail sales, and online
     auction.
-  </p>
+  </li>
+
   <img src="https://www.maxcdn.com/one/media/web-application.png" />
-</div>
+</Appear>
+</ul>
 
 ---
 
-### How to make a modern web application?
+### How to make a web application?
 
 <ul>
   <Appear>
@@ -53,38 +65,34 @@ export const themes = [swiss, aspect];
 
 ### SSR
 
-#### Advantages
-
-<ul>
-  <Appear>
-    <li>Faster first page load </li>
-    <li> Better SEO </li>
-  </Appear>
-
-</ul>
+<Appear>
+  <li>Information/Data is processed server side</li>
+  <li>UI is generated server side</li>
+  <li>Server responds with HTML pages</li>
+</Appear>
 
 ---
 
 ### CSR
 
-#### Advantages
+<Appear>
+  <li>Information/Data is processed client side</li>
+  <li>UI is generated client side</li>
+  <li>Server responds with JSON/XML data</li>
 
-<ul>
-  <Appear>
-    <li>Rich Interactions </li>
-    <li>Not recommended for SEO required pages</li>
-    <div style={{ textAlign: "center" }}>
-      <img
-        style={{ height: "30vh" }}
-        src={require(`file-loader!../img/awesome-js.gif`)}
-      />
-    </div>
-  </Appear>
-</ul>
+  <div style={{ textAlign: "center" }}>
+    <img
+      style={{ height: "30vh" }}
+      src={require(`file-loader!../img/awesome-js.gif`)}
+    />
+  </div>
+</Appear>
 
 ---
 
-### Most of the popular apps use both
+### Most of the popular apps use both.
+
+i.e. SSR, CSR
 
 ##### However, we'll consider a CSR example to keep it simple
 
@@ -107,35 +115,44 @@ fetch("API_URL")
 
 ---
 
+### Demo Time
+
+###### Without React
+
+---
+
+<div>
+  <h4>What is ReactJS?</h4>
+  <p>A JavaScript library for building user interfaces</p>
+  <div>
+    <Appear>
+      <li>Declarative - Describe how it looks not how to create it</li>
+      <li>Component Based - Divide UI into components</li>
+      <li>Learn once write anywhere - React Native, React VR</li>
+      <div style={{ position: "absolute", bottom: "20px", fontSize: "1.3rem" }}>
+        Note - React can be used for SSR as well as CSR
+      </div>
+    </Appear>
+  </div>
+</div>
+
+---
+
+### Demo Time
+
+###### With React
+
+---
+
 <Image src={require("file-loader!../img/fb.png")} />
 
 ---
 
-## What is jsx?
+#### What's next?
 
-import { FullScreenCode } from "mdx-deck/layouts";
+- Progressive Web apps
 
-```jsx
-<Button>Beep</Button>
-```
-
----
-
-import React from "react";
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
-
-<LiveProvider
-  code={`class MyComponent extends React.Component {
-  render() {
-    return "hello";
-  }
-}`}
->
-  <LiveEditor />
-  <LiveError />
-  <LivePreview />
-</LiveProvider>
-
----
-
-<https://github.com/jxnblk/mdx-deck>
+<img
+  style={{ height: "60vh" }}
+  src={require("file-loader!../img/flipkartPWA.gif")}
+/>
