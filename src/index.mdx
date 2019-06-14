@@ -1,16 +1,16 @@
 import { Head, Notes } from "mdx-deck";
 import { Appear } from "mdx-deck";
-import future from '@mdx-deck/themes/future'
-import aspect from '@mdx-deck/themes/aspect'
+import swiss from "@mdx-deck/themes/swiss";
+import aspect from "@mdx-deck/themes/aspect";
 import { Image } from "mdx-deck";
-export const themes = [
-  future,
-  aspect,
-];
+
+export const themes = [swiss, aspect];
+
+### Intro to Web development
 
 ---
 
-### Topics
+#### Topics
 
 <ul>
   <Appear>
@@ -24,7 +24,22 @@ export const themes = [
 
 ---
 
-#### How to make a modern web application?
+<div style={{ padding: "100px" }}>
+  <h4> What is a Web application?</h4>
+  <p>
+    A web application is a client–server computer program which the client runs
+    in a web browser.
+  </p>
+  <p>
+    Common web applications include webmail, online retail sales, and online
+    auction.
+  </p>
+  <img src="https://www.maxcdn.com/one/media/web-application.png" />
+</div>
+
+---
+
+### How to make a modern web application?
 
 <ul>
   <Appear>
@@ -58,28 +73,29 @@ export const themes = [
   <Appear>
     <li>Rich Interactions </li>
     <li>Not recommended for SEO required pages</li>
-    <div style={{textAlign:"center"}}>
-      <img 
-          style={{ height:"30vh"
-        }} src={require(`file-loader!../img/awesome-js.gif`)} />
+    <div style={{ textAlign: "center" }}>
+      <img
+        style={{ height: "30vh" }}
+        src={require(`file-loader!../img/awesome-js.gif`)}
+      />
     </div>
-   
   </Appear>
 </ul>
 
+---
+
+### Most of the popular apps use both
+
+##### However, we'll consider a CSR example to keep it simple
 
 ---
 
-#### Most of the popular apps use both
-
-###### However, we'll consider a CSR example to keep it simple
----
 #### CSR 101
 
 ##### How an API call is made in a browser?
 
 ```jsx
-fetch('API_URL')
+fetch("API_URL")
   .then(function(response) {
     return response.json();
   })
@@ -88,6 +104,7 @@ fetch('API_URL')
     console.log(JSON.stringify(myJson));
   });
 ```
+
 ---
 
 <Image src={require("file-loader!../img/fb.png")} />
