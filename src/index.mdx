@@ -2,16 +2,38 @@ import { Head, Notes } from "mdx-deck";
 import { Appear } from "mdx-deck";
 import swiss from "@mdx-deck/themes/swiss";
 import aspect from "@mdx-deck/themes/aspect";
+import { Split } from "mdx-deck/layouts";
 import { Image } from "mdx-deck";
-const webDevImage = require("file-loader!../img/web-dev.png");
+import aspect43 from "@mdx-deck/themes/aspect-4-3";
+const webDevImage = require("file-loader!../img/web-icon.png");
+const bgImage = require("file-loader!../img/mountains.jpg");
 const smallFontStyle = {
   fontSize: "1.5rem"
 };
-export const themes = [swiss, aspect];
+const themeOverride = {
+  ...swiss,
+  colors: {
+    ...swiss.colors,
+    background: "#fff"
+  }
+};
 
-### Intro to Web Development
+export const themes = [themeOverride, aspect43, aspect];
+
+<div 
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding:"20px"
+  }}
+ >
+
+<h4> Intro to Web Development 💻</h4>
 
 <img src={webDevImage} title="Web development" />
+
+</div>
 
 ---
 
@@ -34,7 +56,7 @@ export const themes = [swiss, aspect];
 
 ---
 
-<ul style={{ padding: "0 100px" }}>
+<ul style={{ padding: "10px 100px" }}>
   <h3>What is a web application? 🤔</h3>
   <Appear>
     <li>
@@ -46,7 +68,7 @@ export const themes = [swiss, aspect];
     </li>
     <div style={{ textAlign: "center" }}>
       <img
-        style={{ height: "30vh" }}
+        style={{ height: "25vh" }}
         src={require(`file-loader!../img/awesome-js.gif`)}
       />
     </div>

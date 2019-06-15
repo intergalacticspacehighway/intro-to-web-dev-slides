@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "mdx-deck src/index.mdx"
+    "start": "mdx-deck src/index.mdx",
+    "build": "mdx-deck build src/index.mdx"
   },
   "keywords": [],
   "author": "Nishan B <nishanbende@gmail.com>",
@@ -15,6 +16,7 @@
     "mdx-deck": "^2.3.2"
   },
   "dependencies": {
+    "@mdx-deck/themes": "^2.3.2",
     "react-live": "^2.1.2"
   }
 }
