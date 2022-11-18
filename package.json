@@ -13,7 +13,7 @@
   "license": "MIT",
   "devDependencies": {
     "file-loader": "^4.0.0",
-    "mdx-deck": "^2.3.2"
+    "mdx-deck": "^4.1.1"
   },
   "dependencies": {
     "@mdx-deck/themes": "^2.3.2",
